@@ -257,6 +257,7 @@ class TextMessageText extends StatelessWidget {
                   decoration: TextDecoration.underline,
                 ),
           ),
+          /* Disable Markdown
           MatchText(
             pattern: PatternStyle.bold.pattern,
             style: boldTextStyle ??
@@ -299,6 +300,7 @@ class TextMessageText extends StatelessWidget {
               ),
             },
           ),
+          */
         ],
         maxLines: maxLines,
         overflow: overflow,
