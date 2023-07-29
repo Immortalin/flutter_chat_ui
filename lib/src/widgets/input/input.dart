@@ -156,10 +156,7 @@ class _InputState extends State<Input> {
                     padding: buttonPadding,
                   ),
                 if (widget.options.leadingWidget != null)
-                  Padding(
-                    padding: buttonPadding,
-                    child: widget.options.leadingWidget,
-                  ),
+                  widget.options.leadingWidget!,
                 Expanded(
                   child: Padding(
                     padding: textPadding,
