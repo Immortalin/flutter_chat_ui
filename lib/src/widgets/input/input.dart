@@ -155,6 +155,11 @@ class _InputState extends State<Input> {
                     onPressed: widget.onAttachmentPressed,
                     padding: buttonPadding,
                   ),
+                if (widget.options.leadingWidget != null)
+                  Padding(
+                    padding: buttonPadding,
+                    child: widget.options.leadingWidget,
+                  ),
                 Expanded(
                   child: Padding(
                     padding: textPadding,
@@ -257,6 +262,7 @@ class InputOptions {
     this.autofocus = false,
     this.enableSuggestions = true,
     this.enabled = true,
+    this.leadingWidget,
   });
 
   /// Controls the [Input] clear behavior. Defaults to [InputClearMode.always].
@@ -295,4 +301,7 @@ class InputOptions {
 
   /// Controls the [TextInput] enabled behavior. Defaults to [true].
   final bool enabled;
+
+  /// Leading widget for the [Input] widget.
+  final Widget? leadingWidget;
 }
