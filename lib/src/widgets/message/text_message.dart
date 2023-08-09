@@ -131,7 +131,11 @@ class TextMessage extends StatelessWidget {
           nameBuilder?.call(message.author) ?? UserName(author: message.author),
         if (enlargeEmojis)
           if (options.isTextSelectable)
-            SelectableText(message.text, style: emojiTextStyle)
+            SelectableText(
+              message.text,
+              style: emojiTextStyle,
+              scrollPhysics: const NeverScrollableScrollPhysics(),
+            )
           else
             Text(message.text, style: emojiTextStyle)
         else
